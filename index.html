@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THE KILLER WIN MACHINE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <main class="site-shell">
+    <header class="topbar">
+      <div class="tiny-logo">★ KILLER WIN MACHINE ★</div>
+      <div class="status">SYSTEM STATUS: <span>PROBABLY FINE</span></div>
+    </header>
+
+    <section class="hero">
+      <div class="sticker sticker-one">!!! WOW !!!</div>
+      <div class="sticker sticker-two">DBD<br>CHALLENGE</div>
+      <p class="eyebrow">WELCOME, SURVIVOR / KILLER / WHATEVER</p>
+      <h1>THE KILLER<br><span>WIN MACHINE</span></h1>
+      <p id="message" class="message">please select a killer. i am waiting.</p>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat"><b id="completed">0 / 17</b><small>KILLERS CLEARED</small></div>
+      <div class="stat"><b id="totalWins">0</b><small>TOTAL WINS</small></div>
+      <div class="stat"><b id="totalLosses">0</b><small>TOTAL LOSSES</small></div>
+      <div class="stat"><b id="overallRate">0%</b><small>OVERALL WIN RATE</small></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title"><span>☑</span> KILLER CHECKLIST <small>click one to inspect it</small></div>
+      <div id="killerList" class="killer-list"></div>
+      <button id="addKiller" class="secondary-btn">＋ ADD A KILLER I BOUGHT</button>
+    </section>
+
+    <section id="detailsPanel" class="panel hidden">
+      <div class="panel-title"><span>★</span> KILLER RECORD</div>
+      <div class="record-head">
+        <div>
+          <div id="selectedKiller" class="selected-killer">TRAPPER</div>
+          <div id="selectedRecord" class="record-line">0 WINS / 0 LOSSES</div>
+        </div>
+        <div id="selectedRate" class="big-rate">0%</div>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="record-buttons">
+        <button id="winBtn" class="win-btn">✓ I WON</button>
+        <button id="lossBtn" class="loss-btn">✕ I LOST</button>
+      </div>
+      <button id="randomBuild" class="random-btn">🎲 GIVE ME A RANDOM PRESET</button>
+      <div id="buildBox" class="build-box hidden">
+        <div class="build-label">TODAY'S QUESTIONABLE DECISION:</div>
+        <h3 id="buildName">Preset</h3>
+        <ol id="buildPerks"></ol>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title"><span>▣</span> PRESET LIBRARY <small>these are the builds the machine can choose</small></div>
+      <div id="presetList" class="preset-list"></div>
+      <button id="addPreset" class="secondary-btn">＋ MAKE A NEW PRESET</button>
+    </section>
+
+    <section class="panel help">
+      <div class="panel-title"><span>?</span> HOW THIS THING WORKS</div>
+      <p>Pick a killer → click <b>GIVE ME A RANDOM PRESET</b> → play the match → record the result. Everything saves in this browser automatically.</p>
+      <p class="warning">⚠ If you clear this browser's site data, your records may disappear. Use Export Backup occasionally!</p>
+      <div class="backup-buttons">
+        <button id="exportBtn" class="secondary-btn">↓ EXPORT BACKUP</button>
+        <label class="secondary-btn file-label">↑ IMPORT BACKUP<input id="importInput" type="file" accept=".json"></label>
+        <button id="resetBtn" class="danger-btn">RESET ALL DATA</button>
+      </div>
+    </section>
+
+    <footer>
+      <span>made with questionable amounts of HTML</span>
+      <span>★ 1999–20?? ★</span>
+      <span>DO NOT FEED THE MACHINE</span>
+    </footer>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" id="closeModal">×</button>
+      <h2 id="modalTitle">NEW THING</h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

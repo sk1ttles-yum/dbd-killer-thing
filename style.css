@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap');
+
+:root{
+  --pink:#ff55b7; --cyan:#51e6ff; --yellow:#fff45c; --purple:#8d6cff;
+  --ink:#171326; --paper:#fff9e9; --muted:#665d78; --green:#53df91; --red:#ff5c67;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; color:var(--ink); font-family:'VT323',monospace; font-size:20px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255,85,183,.24) 0 4px, transparent 5px),
+    radial-gradient(circle at 80% 10%, rgba(81,230,255,.28) 0 3px, transparent 4px),
+    linear-gradient(135deg,#cdbaff,#fff3aa 48%,#a9eaff);
+  background-size:70px 70px,90px 90px,auto; min-height:100vh;
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;
+ background-image:repeating-linear-gradient(0deg,transparent 0 3px,#fff 4px,#fff 5px);
+ z-index:20}
+.site-shell{max-width:1100px;margin:auto;padding:18px}
+.topbar{display:flex;justify-content:space-between;gap:15px;background:#211a37;color:#fff;padding:9px 14px;border:4px solid #fff;box-shadow:6px 6px 0 var(--ink);font-family:'Press Start 2P',monospace;font-size:10px}
+.status span{color:var(--green)}
+.hero{position:relative;text-align:center;padding:60px 20px 35px}
+.eyebrow{letter-spacing:3px;color:#493d66}
+h1{font-family:'Press Start 2P',monospace;font-size:clamp(30px,6vw,70px);line-height:1.18;margin:15px 0;text-shadow:5px 5px 0 #fff}
+h1 span{color:var(--pink);-webkit-text-stroke:2px var(--ink);text-shadow:5px 5px 0 var(--cyan)}
+.message{display:inline-block;background:var(--yellow);padding:8px 15px;border:3px dashed var(--ink);transform:rotate(-1deg)}
+.sticker{position:absolute;font-family:'Press Start 2P';font-size:11px;padding:12px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.sticker-one{background:var(--pink);left:2%;top:35px;transform:rotate(-8deg)}
+.sticker-two{background:var(--cyan);right:2%;top:65px;transform:rotate(7deg)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.stat,.panel{background:rgba(255,249,233,.94);border:4px solid var(--ink);box-shadow:7px 7px 0 var(--ink)}
+.stat{text-align:center;padding:15px}.stat b{display:block;font-family:'Press Start 2P';font-size:20px;color:var(--purple)}.stat small{font-size:15px}
+.panel{padding:0;margin:0 0 22px}.panel-title{background:var(--ink);color:#fff;padding:11px 14px;font-family:'Press Start 2P';font-size:12px}.panel-title span{color:var(--yellow);margin-right:8px}.panel-title small{float:right;color:#bdb5cf;font-family:'VT323';font-size:17px}
+.killer-list{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding:14px}
+.killer-card{position:relative;text-align:left;border:3px solid var(--ink);background:#fff;padding:10px;cursor:pointer;min-height:65px;transition:.08s}
+.killer-card:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--cyan)}
+.killer-card.selected{background:#fff45c}.killer-card.cleared{background:#b9ffd6}
+.killer-name{font-family:'Press Start 2P';font-size:11px;display:block;margin-bottom:7px}.killer-record{font-size:16px}
+.check{position:absolute;right:7px;top:7px;font-size:23px}.custom{color:var(--purple)}
+.secondary-btn,.danger-btn,.win-btn,.loss-btn,.random-btn{font-family:'VT323';font-size:20px;border:3px solid var(--ink);padding:9px 14px;cursor:pointer;box-shadow:4px 4px 0 var(--ink);background:#fff;margin:0 14px 14px}.secondary-btn:hover,.random-btn:hover,.win-btn:hover,.loss-btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.record-head{display:flex;justify-content:space-between;align-items:center;padding:18px}.selected-killer{font-family:'Press Start 2P';font-size:22px}.record-line{margin-top:8px;color:var(--muted)}.big-rate{font-family:'Press Start 2P';font-size:35px;color:var(--pink)}
+.progress{height:18px;background:#ddd0e9;border:3px solid var(--ink);margin:0 18px 15px}.progress div{height:100%;width:0;background:var(--green);transition:.2s}
+.record-buttons{display:flex;gap:10px;padding:0 4px}.win-btn{background:var(--green);flex:1}.loss-btn{background:#ff9ca3;flex:1}
+.random-btn{display:block;width:calc(100% - 28px);margin-top:5px;background:var(--cyan);font-family:'Press Start 2P';font-size:13px}
+.build-box{margin:0 14px 16px;padding:15px;border:4px dashed var(--purple);background:#f0eaff}.build-label{font-size:15px}.build-box h3{font-family:'Press Start 2P';font-size:17px;margin:8px 0}.build-box li{margin:8px 0}
+.preset-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:14px}.preset{border:3px solid var(--ink);padding:12px;background:#fff}.preset h3{font-family:'Press Start 2P';font-size:12px;margin:0 0 8px}.preset ol{margin:0;padding-left:25px}.preset li{margin:3px 0}.preset-actions{margin-top:10px}.mini-btn{border:2px solid var(--ink);background:#fff45c;padding:4px 8px;cursor:pointer;font-family:'VT323';font-size:16px}.help p{padding:0 18px}.warning{color:#8c2540}.backup-buttons{display:flex;flex-wrap:wrap}
+.file-label{display:inline-block}.file-label input{display:none}
+.danger-btn{background:#ff7777}.modal{position:fixed;inset:0;background:rgba(23,19,38,.7);display:grid;place-items:center;z-index:50;padding:20px}.modal-card{background:var(--paper);border:5px solid var(--ink);box-shadow:10px 10px 0 var(--pink);max-width:600px;width:100%;padding:20px;position:relative}.close{position:absolute;right:10px;top:8px;font-size:28px;background:none;border:0;cursor:pointer}.modal h2{font-family:'Press Start 2P';font-size:20px}.modal input,.modal textarea{width:100%;border:3px solid var(--ink);padding:9px;font-family:'VT323';font-size:20px;margin:5px 0 12px}.modal textarea{min-height:130px}.modal button.save{background:var(--green);border:3px solid var(--ink);padding:10px 15px;font-family:'VT323';font-size:20px;cursor:pointer}
+footer{display:flex;justify-content:space-between;gap:15px;padding:25px 5px;font-size:15px;color:#44395d}.hidden{display:none!important}
+@media(max-width:750px){.stats-grid{grid-template-columns:repeat(2,1fr)}.killer-list{grid-template-columns:repeat(2,1fr)}.preset-list{grid-template-columns:1fr}.topbar{font-size:8px}.status{display:none}.sticker{display:none}.record-buttons{flex-direction:column}.selected-killer{font-size:17px}}
+@media(max-width:480px){.site-shell{padding:10px}.killer-list{grid-template-columns:1fr}.hero{padding-top:35px}.stat b{font-size:15px}}
